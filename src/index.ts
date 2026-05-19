@@ -348,6 +348,8 @@ async function main(): Promise<void> {
   } else {
     const app = express();
     app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.urlencoded({ extended: true }));
 
     // ============================================================
     // OAuth 2.1 endpoints for Claude.ai custom connector handshake
